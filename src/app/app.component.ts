@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import {AuthService} from './services/auth.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +9,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'github-login';
+
+  constructor(
+    private auth:AuthService
+  ){
+    auth.getUser().subscribe(
+      (user) => {
+        console.log(user);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  }
 }

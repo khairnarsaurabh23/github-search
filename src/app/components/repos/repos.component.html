@@ -1,0 +1,12 @@
+<div *ngFor="let name of names"   class="list-group">
+  <a
+    *ngIf="name"
+    href="https://github.com/{{userName}}/{{name}}"
+    target="_blank"
+    class="list-group-item list-group-item-action bg-dark text-white"
+  >
+    {{ name }}
+  </a>
+</div>
+
+<!--for (const [key, value] of Object.entries(object1))-->

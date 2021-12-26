@@ -1,0 +1,26 @@
+
+<div *ngIf="user.login" class="card user-card text-white bg-dark">
+  <div class="text-center">
+    <img
+      class="img-fluid rounded-circle profile-pic border-white"
+      [src]="user.avatar_url"
+      alt=""
+    />
+  </div>
+
+  <div class="card-body">
+    <h5 class="card-title">
+      {{ user.name }}
+    </h5>
+    <p class="card-text">BIO: {{ user.bio }}</p>
+    <p class="card-text">Company: {{ user.company }}</p>
+    <p class="card-text"><a href="https://github.com/{{ user.login}}?tab=repositories">Repositories</a></p>
+    <p class="card-text">
+      Updated at:
+      {{ user.updated_at | date: "medium" }}
+    </p>
+  </div>
+</div>
+
+
+<!--class="img-fluid rounded-circle profile-pic border-white"-->

@@ -1,0 +1,36 @@
+<div class="container-fluid bg-dark text-white h-100">
+  <form
+    class="form-inline d-flex justify-content-center"
+    (ngSubmit)="findUser()"
+  >
+    <div class="row">
+      <input
+        [(ngModel)]="userName"
+        type="text"
+        id="userName"
+        class="form-control mx-sm-3 m-3"
+        name="userName"
+      />
+    </div>
+    <button type="submit" class="btn btn-success mx-sm-3 m-3 text-white">Search</button>
+  </form>
+
+  <!-- to render error -->
+  <div *ngIf="error" class="alert alert-danger m-5" role="alert">
+    {{ error }}
+  </div>
+
+  <div class="row text-center fixed-height">
+    <div class="col col-md-6">
+      <app-user-card *ngIf="show" [user]="user"></app-user-card>
+    </div>
+    <div class="col col-md-6" >
+      <user-repositories-list  *ngIf="show" [userName]="userName"></user-repositories-list>
+    </div>
+    <div *ngIf="!show" class="col-md-12 text-center text-white">
+      <p>Please enter <b>Github</b> username .</p><br><br>
+      <p>This web app is developed by:</p>
+      <b>Khairnar Saurabh</b>
+    </div>
+  </div>
+</div>
