@@ -1,3 +1,8 @@
 .fixed-height{
 	height: 600px;
 }
+
+.author-image{
+	height: 200px;
+	width: 200px;
+}

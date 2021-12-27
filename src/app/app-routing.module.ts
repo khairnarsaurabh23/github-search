@@ -16,6 +16,7 @@ import {
 } from '@angular/fire/compat/auth-guard';
 
 //redirection callbacks / authGuardPipes
+//changed routing for heroku
 const redirectUnauthorizedToSignIn = () => redirectUnauthorizedTo(['signin']);
 const redirectSignedIn = () => redirectLoggedInTo(['']);
 
@@ -37,9 +38,9 @@ const routes: Routes = [
   {
     path:  '',
     component: HomeComponent,
-    canActivate: [AngularFireAuthGuard], 
+    //canActivate: [AngularFireAuthGuard], 
     //if user is not authorized redirect t to the signin
-    data: { authGuardPipe: redirectUnauthorizedToSignIn }
+    //data: { authGuardPipe: redirectUnauthorizedToSignIn }
   },
   //404 Page not found
   //`**` means 'rest of all'
