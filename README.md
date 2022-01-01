@@ -1,3 +1,6 @@
 ### Github-search 
-- Angular Project to find Github users using Github Api.
-- FireBase is used for user releted functions.
+- Angular Project using GitHub Api to find GitHub user's.
+
+[catch live!]('gh-user.herokuapp.com')
+
+- Just enter your GitHub Username and web-app will handle rest things for you.
